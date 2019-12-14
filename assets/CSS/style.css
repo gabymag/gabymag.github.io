@@ -10,7 +10,8 @@ header nav ul li{
     float: right;
     font-family: Arial, Helvetica, sans-serif;
     color: #777777;
-    margin: auto;
+    
+    
     
 }
 header{
@@ -34,7 +35,7 @@ a:hover{
     padding: 10px;
     margin: auto;
     text-align: left;
-    border-color: #cccccc;
+    border: 2px solid #cccccc;
     width: 400px;
     height: 70px;
     float: left;
@@ -76,24 +77,29 @@ p{
 body{
     background-image: url("../images/paper.png");
     padding: 10px;
-    line-height: 32px;
-   
-    
-   
-
-
+    line-height: 1.5em;
+    overflow: auto;
 }
 #showcase{
     background-color: #ffffff;
     float: left;    
     width: 960px;
-    border: 2px solid #cccccc;
-    padding: 18px;
+    border: 1px solid #cccccc;
+    padding: 1px;
     margin-top: 30px;
-    overflow: scroll;
-   
-   
+    overflow: auto;  
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    float: left;
+    overflow: scroll;
+  }
+
 .footer{
     clear: both;
     border-top: 8px solid #4aaaa5;
@@ -114,5 +120,30 @@ form{
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     
+}
+
+
+
+/* image gallery */
+.gallery{
+    display: flex;
+    grid-gap: 1em;
+    justify-content: center;
+
+}
+.gallery>figure{
+    margin: 0;
+    
+}
+.gallery img{
+    width: 90%;
+    object-fit: fill;
+    
+}
+.gallery figcaption{
+    padding: .3em;
+    color: black;
+    background-color: #4aaaa5;
+    text-align: center;
 }
 
